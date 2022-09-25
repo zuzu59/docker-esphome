@@ -1,0 +1,23 @@
+#zf220925.1522
+# Petit docker pour faire tourner ESPhome en stand alone sur son ordi ou serveur cloud
+# sources: 
+# https://hub.docker.com/r/esphome/esphome
+# https://esphome.io/guides/getting_started_command_line.html
+# 
+
+version: "3.9"
+
+version: '3'
+services:
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    ports:
+      - '6052:6052'
+    volumes:
+      - $PWD/esphome/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+    privileged: true
+#    network_mode: host
+
