@@ -1,7 +1,7 @@
 # docker_esphome
 Petit docker-compose pour faire tourner ESPhome en stand alone sur son ordi ou un serveur du cloud
 
-zf220925.1645
+zf220925.1707
 
 
 ## Buts
@@ -66,6 +66,21 @@ Attention, ça efface vraiment toute la partie Docker sur la machine, donc faire
 ./purge.sh
 sudo rm -rf data/ meta/
 ```
+
+
+### Soyons foufou, faisons-le tourner sur Gitpod juste pour faire joujou !
+Ce projet tourne très bien sur Gitpod pour juste voir comment cela fonctionne !
+
+De plus on a une puisse dingue sur Gitpod, donc cela compile nettement plus rapidement que sur un *RASPI*
+
+Il suffit juste de cliquer sur le *bouton* GITPOD sur Github pour démarrer Gitpod et après dans la fenêtre terminal de Gitpod, il faut le *démarrer* comme indiqué plus haut.
+
+Le *firmware* de l'ESP compilé se trouve dans un dossier du style:
+
+ /workspace/docker-esphome/esphome/config/.esphome/build/toto/.pioenvs/toto
+ 
+ et il porte le nom de *firmware.bin*
+ 
 
 ## Sources
 https://hub.docker.com/r/esphome/esphome
